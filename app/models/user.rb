@@ -4,4 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :messages, dependent: :destroy
+
+  def avatar_url
+    "http://placecage.com/40/40"
+  end
 end
