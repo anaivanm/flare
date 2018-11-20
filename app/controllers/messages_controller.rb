@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   def create
     @message = Message.new(message_params)
     @chat = Chat.find(params[:chat_id])
@@ -8,7 +9,6 @@ class MessagesController < ApplicationController
       ActionCable.server.broadcast("chat_#{@chat.id}", {
         message_partial: render(partial: "messages/message", locals: {message: @message})
         })
-
     else
       respond_to do |format|
         format.html {
