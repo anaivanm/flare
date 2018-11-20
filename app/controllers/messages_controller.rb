@@ -6,16 +6,18 @@ class MessagesController < ApplicationController
     @message.chat = @chat
     @message.user = current_user
     if @message.save
-      respond_to do |format|
-        format.html { redirect_to chat_path(@chat) }
-        format.js
-      end
+      ActionCable.server.broadcast("chat_#{@chat.id}", {
+        message_partial: render(partial: "messages/message", locals: {message: @message})
+        })
     else
       respond_to do |format|
-        format.html { "chats/show" }
+        format.html {
+          render "chats/show"
+        }
         format.js
       end
     end
+
   end
 
   private
