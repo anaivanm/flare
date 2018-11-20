@@ -6,16 +6,19 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+
+.bg-fancy-blue {
+  background-color: $fancy-blue;
+}
 
 
-  h1 {
-    font-family: "Sacramento", cursive;
-    font-size: 130px;
-    font-weight: bold;
-    text-shadow: -1px -1px 10px rgba(150, 150, 150, 1);
-    margin-top: 130px;
-    margin-bottom: 115px;
-  }
+h1 {
+  font-family: "Open Sans";
+  font-size: 50px;
+  font-weight: 500;
+  color: $big-text-blue;
+}
 
 h3 {
   font-family: "Open Sans Condensed";
@@ -23,6 +26,7 @@ h3 {
   text-shadow: -1px -1px 10px rgba(150, 150, 150, 1);
   margin-bottom: 50px;
   letter-spacing: 2px;
+  color: $big-text-blue;
 
 }
 
@@ -32,5 +36,5 @@ p {
     color:rgb(255, 255, 255);
     opacity: 0.6;
     margin-bottom: 30px;
-  }
+    color: #969696;
 }
