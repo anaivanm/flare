@@ -1,0 +1,71 @@
+<h1>Designs#index</h1>
+<p>Find me in app/views/designs/index.html.erb</p>
+
+<h1>Design components</h1>
+
+<h2>Card</h2>
+
+<%= render partial: 'shared/card', locals: { beach: Beach.first } %>
+
+<h2>Buttons</h2>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
+
+<img src='https://kitt.lewagon.com/placeholder/users/AdlineI' class="avatar-bordered"/>
+<img src='https://kitt.lewagon.com/placeholder/users/AdlineI' class="avatar-large"/>
+
+<div>color sample</div>
+
+<div class="div-with-flex">
+
+  <div class="color-sample gray"></div>
+
+  <div class="color-sample blue"></div>
+
+  <div class="color-sample green"></div>
+
+  <div class="color-sample yellow"></div>
+
+  <div class="color-sample red"></div>
+
+  <div class="color-sample orange"></div>
+
+  <div class="color-sample light-yellow"></div>
+
+  <div class="color-sample light-orange"></div>
+  <div class="color-sample sea-serpent"></div>
+
+</div>
+
+
+<h2>Banner</h2>
+<%= render 'shared/banner' %>
+
+
+
+<div id="app" class="container">
+  <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+    <h1 slot="header">Canyons</h1>
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </card>
+</div>

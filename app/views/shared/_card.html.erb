@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-photo" style="background-image: linear-gradient(0deg, rgba(255, 248, 184, 0.20) 50%, rgba(255, 251, 235, 0.48) 80%), url(<%= beach.photo %>);" >
+  </div>
+  <div class="card-description">
+    <h2><%= link_to beach.name, beach_path(beach) %></h2>
+    <p><%= beach.location %></p>
+    <p><%= beach.price %> € / night</p>
+  </div>
+</div>
