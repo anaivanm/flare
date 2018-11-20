@@ -1,55 +1,54 @@
 <div class="navbar-umbrella">
-    <!-- Logo -->
-    <a href="<%= beaches_path %>" class="navbar-umbrella-brand">
-       <img src="<%= asset_path 'logo.svg' %>" alt="logo">
-     </a>
+  <!-- Logo -->
+  <a href="/" class="navbar-umbrella-brand">
+   <img src="<%= asset_path 'logo.png' %>" alt="logo">
+ </a>
 
-    <!-- Right Navigation -->
-    <div class="navbar-umbrella-right hidden-xs hidden-sm">
-      <div class="navbar-umbrella-links hidden-xs">
-        <a href="<%= new_beach_path %>" class="navbar-umbrella-item navbar-umbrella-link">Add a listing</a>
-        <% if current_user && current_user.owner? %>
-          <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My beaches</a>
-        <% else %>
-          <a href="<%= dashboard_path %>" class="navbar-umbrella-item navbar-umbrella-link">My bookings</a>
-        <% end %>
-        <a href="<%= new_user_session_path %>" class="navbar-umbrella-item navbar-umbrella-link">Sign-in</a>
-      </div>
-      <!-- Profile picture with dropdown list -->
-      <div class="navbar-umbrella-item">
+ <!-- Center Navigation -->
+ <div class="navbar-center hidden-xs">
+  <a href="" class="navbar-wagon-item navbar-wagon-link">ABOUT US</a>
+  <a href="" class="navbar-wagon-item navbar-wagon-link">HOW IT WORKS</a>
+  <a href="" class="navbar-wagon-item navbar-wagon-link">SUPPORT US</a>
+</div>
 
-    <!-- View owner -->
-      <% if user_signed_in? %>
-        <div class="dropdown">
-          <img src= "<%= asset_path 'user-ninja-solid.svg'%>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
-          <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </div>
-
-    <!-- Not logged in -->
-      <% else %>
-        <div class="navbar-umbrella-item">
-          <div class="dropdown">
-            <img src= "<%= asset_path 'user-ninja-solid.svg'%>" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-            <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-              <li><%= link_to "Login", new_user_session_path %></li>
-            </ul>
-          </div>
-        </div>
+<!-- Right Navigation -->
+<div class="navbar-umbrella-right hidden-xs hidden-sm">
+  <div class="navbar-wagon-item">
+    <div class="dropdown">
+      <% if user_signed_in? && current_user.is_helper?%>
+      <img src= "<%= asset_path 'logo.png' %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
+      <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
+        <li><a href="#">Shifts</a></li>
+        <li><a href="#">Escalation</a></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% elsif user_signed_in? %>
+      <img src= "<%= asset_path 'logo.png' %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
+      <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
+        <li><a href="#">Emergency contacts</a></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      </ul>
       <% end %>
-
-      </div>
-    </div>
-
-    <div class="navbar-umbrella-item hidden-md hidden-lg">
-      <div class="dropdown">
-        <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
-        <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-          <li><a href="#">"Log in"</a></li>
-          <li><a href="#">"my beaches"</a></li>
-          <li><a href="#">"messages"</a></li>
-        </ul>
-      </div>
     </div>
   </div>
+</div>
+
+<!-- Dropdown appearing on mobile only -->
+<div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="dropdown">
+    <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <% if user_signed_in? && current_user.is_helper? %>
+      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My shifts</a></li>
+      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">Escalate</a></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+
+      <% elsif user_signed_in? %>
+      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">Emergency contacts</a></li>
+      <% else %>
+      <li><a href="<%= new_user_session_path %>" class="navbar-umbrella-item navbar-umbrella-link">Volunteer login</a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</div>

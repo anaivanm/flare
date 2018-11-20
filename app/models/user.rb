@@ -8,4 +8,8 @@ class User < ApplicationRecord
   def avatar_url
     "http://placecage.com/40/40"
   end
+
+  def is_helper?
+    true
+  end
 end
