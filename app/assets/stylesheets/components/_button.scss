@@ -11,3 +11,31 @@
   text-decoration: none;
   color: #999999;
 }
+
+.navbar-center a {
+  border-radius: 4px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0px 30px;
+  border: 0px none white;
+  text-decoration: none;
+  color: #3385d9;
+}
+
+.navbar-right a {
+  border-radius: 4px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0px 20px;
+  border: 0.5px solid #3385D9;
+  padding: 6px 12px 8px 12px;
+  text-decoration: none;
+  &:hover {
+    background-color: #3385d9;
+    color: white;
+  }
+}

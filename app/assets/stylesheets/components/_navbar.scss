@@ -1,7 +1,7 @@
 /* Main navbar */
 .navbar-umbrella {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background:#f5f5f5;
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background:#ffffff;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -11,8 +11,10 @@
 }
 
 /* Logo */
-.navbar-umbrella-brand img {
+.navbar-umbrella-brand {
   height: 50px;
+  width: 50px;
+  margin: 5px 0px;
 }
 
 /* User Avatar */
@@ -27,6 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #3385D9;
 }
 
 /* Basic navbar item */
