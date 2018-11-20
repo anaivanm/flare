@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'design', to: "designs#index"
   # get 'messages/create'
   devise_for :users
   root to: 'pages#home'
