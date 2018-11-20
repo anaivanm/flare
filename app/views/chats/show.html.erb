@@ -3,7 +3,7 @@
     <div class="col-sm-6 col-sm-offset-3">
       <div class="messages">
         <% @chat.messages.each do |message| %>
-        <%= render "shared/message", message: message %>
+        <%= render "shared/message", message: message, user_is_messages_author: message.user == current_user %>
         <% end %>
       </div>
       <div id="create-message">
@@ -17,8 +17,8 @@
 
 <% content_for :after_js do %>
   <script>
-    App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create({
-      { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },{
+    App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create(
+      { channel: 'ChatsChannel', chat_id: <%= @chat.id %> }, {
       received: (data) => {
         if (data.current_user_id !== <%= current_user.id %>) {
           const messagesContainer = document.querySelector('.messages');
@@ -26,7 +26,8 @@
           scrollLastMessageIntoView();
          }
         }
-      })
+      }
+    );
   </script>
 <% end %>
 
