@@ -1,4 +1,10 @@
 <h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
 
-  <%= link_to "Chat Send Flare ", chats_path, method: :post  %>
+<!-- Button trigger small modal -->
+<%= link_to(chats_path, method: :post) do  %>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Send a flare</button>
+<% end %>
+
+<%= render 'shared/modal' %>
 
