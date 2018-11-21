@@ -10,6 +10,6 @@ class User < ApplicationRecord
   end
 
   def is_helper?
-    true
+    self.is_helper
   end
 end
