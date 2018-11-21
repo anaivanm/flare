@@ -1,3 +1,7 @@
+section {
+  padding: 100px 0px;
+}
+
 .banner {
   color: white;
   text-align: center;
@@ -6,29 +10,47 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 70px;
 }
 
 .bg-fancy-blue {
   background-color: $fancy-blue;
 }
 
+#hero {
+  background-color: #f6f8f9;
+}
 
-h1 {
+#hero h1 {
   font-family: "Open Sans";
   font-size: 50px;
   font-weight: 500;
   color: $big-text-blue;
 }
 
-h3 {
-  font-family: "Open Sans Condensed";
+#hero h3 {
+  font-family: "Open Sans";
   font-weight: bold;
-  text-shadow: -1px -1px 10px rgba(150, 150, 150, 1);
   margin-bottom: 50px;
   letter-spacing: 2px;
   color: $big-text-blue;
-
 }
+
+// h1 {
+//   font-family: "Open Sans";
+//   font-size: 50px;
+//   font-weight: 500;
+//   color: $big-text-blue;
+// }
+
+// h3 {
+//   font-family: "Open Sans";
+//   font-weight: bold;
+//   margin-bottom: 50px;
+//   letter-spacing: 2px;
+//   color: $big-text-blue;
+
+// }
 
 p {
     font-size: 25px;
