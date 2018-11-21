@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
+      <%= render 'shared/modal' %>
       <div class="messages">
         <% @chat.messages.each do |message| %>
         <%= render "shared/message", message: message, user_is_messages_author: message.user == current_user %>
