@@ -9,7 +9,11 @@ class User < ApplicationRecord
 
 
   def avatar_url
+    if is_helper .nil?
     "http://placecage.com/40/40"
+    else
+    "https://www.imdb.com/name/nm0331516/mediaviewer/rm618450688"
+    end
   end
 
   def is_helper?
