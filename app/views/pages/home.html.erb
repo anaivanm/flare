@@ -2,11 +2,9 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <!-- Button trigger small modal -->
+<%= link_to(chats_path, method: :post) do  %>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Send a flare</button>
+<% end %>
 
 <%= render 'shared/modal' %>
 
-
-<% Chat.all.each do |chat| %>
-  <%= link_to "Chat Room #{chat.id}", chat_path(chat)  %>
-<% end %>
