@@ -1,7 +1,23 @@
 <div class="banner bg-fancy-blue">
-  <div class="banner-content">
-    <h1><%= title %></h1>
+<!--   <div class="banner-content">
+    <h1>#<%= title %></h1>
 
-    <h3><%= subtitle %></h3>
-  </div>
+    <h3>#<%= subtitle %></h3>
+  </div> -->
+
+  <!-- H E R O -->
+  <section id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+          <h1><%= title %></h1>
+            <h3><%= subtitle %></h3>
+            <a href="#" class="btn btn-regular">Send a flare</a>
+        </div>
+        <div class="col-md-7 content-box hero-content">
+          <%= image_tag 'placehold-right.png', class: "img-fluid" %>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
