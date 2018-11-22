@@ -1,10 +1,14 @@
+
 <h1>My Dashboards</h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <%= image_tag @user.photo.url || "http://placecage.com/50/50" %>
-      <p>Upload a new photo</p>
+
+<div class="container" >
+  <div class="row" align="justify">
+    <div class="col-md-4">
+      <%= image_tag @user.photo.url || "http://placecage.com/50/50", size: "200x200", class: "profile-image" %>
+    </div>
+    <div class="col-md-4">
+     <!--  <p>Upload a new photo</p> -->
       <%= simple_form_for(@user, as: :user, url: user_registration_path, method: :patch) do |f|%>
         <%= f.error_notification %>
         <div class="form-inputs">
@@ -16,10 +20,13 @@
               input_html: { autocomplete: "current-password" }
               }) %>
           </div>
-           <div class="form-actions">
-              <%= f.button :submit, "Update" %>
-            </div>
-          <% end %>
+          <div class="form-inputs">
+            <%= f.input :username%>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Update" %>
+          </div>
+      <% end %>
     </div>
   </div>
 </div>
