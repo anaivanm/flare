@@ -3,10 +3,17 @@
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <h2>Hello, Friend</h2>
-      <p>What's your name?</p>
-      <input type="text" class="form-control" placeholder="Your name">
-      <button type="button" class="btn btn-modal">Continue anonymously</button>
+      <%= form_tag chats_path, method: :post do %>
+        <%= text_field_tag :username, "", class: "form-control", placeholder: "What's your username?" %>
+        <%= submit_tag "Submit", class: "btn btn-modal" %>
+      <% end %>
+      <% if !user_signed_in? %>
+        <div class="sign_in_link">
+          <%= link_to("Or login", "/users/sign_in") %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
 
