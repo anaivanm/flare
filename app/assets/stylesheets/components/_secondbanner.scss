@@ -35,3 +35,26 @@
   margin-top: 25px;
 }
 
+.h1 {
+  font-family: "Open Sans";
+  font-size: 40px;
+  font-weight: 500;
+  color: $big-text-blue;
+}
+
+.h3 {
+  font-family: "Open Sans";
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  color: $big-text-blue;
+  font-size: 24px;
+}
+
+.p {
+    font-size: 20px;
+    font-weight: bolder;
+    color:rgb(255, 255, 255);
+    opacity: 0.6;
+    margin-bottom: 30px;
+    color: #969696;
+}
