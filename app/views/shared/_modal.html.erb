@@ -3,10 +3,15 @@
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <h2>Hello, Friend</h2>
-      <p>What's your name?</p>
-      <input type="text" class="form-control" placeholder="Your name">
-      <button type="button" class="btn btn-modal">Continue anonymously</button>
+      <input type="text" class="form-control" placeholder="What's your username?">
+      <button type="button" class="btn btn-modal">Submit</button>
+      <% if user_signed_in? %>
+        <div class="sign_in_link">
+          <%= link_to("Login", "/users/sign_in") %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
 
