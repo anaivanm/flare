@@ -5,11 +5,12 @@
         <div class="banner-text .col-md-6 .col-md-offset-3 align-self-center">
           <h1>Lorem ipsum dolor sit amet.</h1>
           <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-          <%= link_to(chats_path, method: :post) do  %>
-<button type="button" class="btn button-banner" data-toggle="modal" data-target=".bs-example-modal-sm">SEND A FLARE</button>
-<% end %>
+          <button type="button" class="btn button-banner" data-toggle="modal" data-target=".bs-example-modal-sm">SEND A FLARE</button>
+          <%= render "shared/modal" %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
