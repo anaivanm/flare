@@ -9,4 +9,7 @@ function visibleOnScroll() {
     });
   });
 }
+
+console.log("Hello from navbar.js");
+
 export { visibleOnScroll };
