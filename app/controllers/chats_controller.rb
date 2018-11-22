@@ -7,7 +7,7 @@ class ChatsController < ApplicationController
 
   def create
     if current_user.nil?
-      helpee = User.create(email: "#{User.last.id + 1}@gmail.com", password: "123456", is_helper: false)
+      helpee = User.create(email: "#{User.last.id + 1}@gmail.com", password: "123456", is_helper: false, username: params[:username])
       sign_in(helpee, scope: :user)
     end
     @chat = Chat.create(helpee: current_user)
