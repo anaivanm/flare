@@ -9,7 +9,25 @@
   align-items: center;
   justify-content: space-between;
 }
+.navbar-fixed-top.solid {
+  background-color: $fancy-blue;
+  transition: background-color 0.6s ease 0s;
+       > li {
 
+          > a {
+            color: white;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end .navbar-nav
+
+.navbar-transparent {
+  background:transparent;
+  background-image: none;
+  border-color: transparent;
+}
 /* Logo */
 .navbar-umbrella-brand {
   height: 50px;
@@ -30,6 +48,7 @@
   align-items: center;
   justify-content: space-between;
   color: $big-text-blue;
+  padding-left: 60px;
 }
 
 /* Basic navbar item */

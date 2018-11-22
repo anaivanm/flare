@@ -1,5 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<% Chat.all.each do |chat| %>
-  <%= link_to "Chat Room #{chat.id}", chat_path(chat)  %>
-<% end %>
+<!-- F I R S T    B A N N E R  -->
+
+<%= render 'shared/banner' %>
+
+<!-- S E C O N D    B A N N E R  -->
+
+<%= render 'shared/secondbanner' %>
+
+<!-- T H I R D    B A N N E R  -->
+
+<%= render 'shared/thirdbanner' %>
+
+<!-- F O O T E R -->
+
+<%= render 'shared/footer' %>
