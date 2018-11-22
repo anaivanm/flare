@@ -6,20 +6,17 @@
   -moz-box-shadow: inset 0px -100px 81px -30px rgba(255,255,255,1);
   box-shadow: inset 0px -100px 81px -30px rgba(255,255,255,1);
   padding-top: 250px;
+  background-image: url('banner.png');
 }
 
-.bg-fancy-blue {
-  background-color: $fancy-blue;
-}
-
-.banner-text h1 {
+.h1 {
   font-family: "Open Sans";
   font-size: 40px;
   font-weight: 500;
   color: $big-text-blue;
 }
 
-.banner-text h3 {
+.h3 {
   font-family: "Open Sans";
   margin-bottom: 50px;
   letter-spacing: 2px;
@@ -27,7 +24,7 @@
   font-size: 24px;
 }
 
-.banner-text p {
+.p {
     font-size: 20px;
     font-weight: bolder;
     color:rgb(255, 255, 255);
