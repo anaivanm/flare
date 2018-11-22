@@ -4,7 +4,7 @@
   background:#ffffff;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+  padding: 0px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,13 +58,13 @@
 }
 
 /* Navbar link */
-.navbar-umbrella-link {
-  color: #616668;
-  font-size: 18px;
-}
-.navbar-umbrella-link:hover {
-  color: #da552f;
-  text-decoration: none;
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $big-text-blue;
+  margin-right: -70px;
 }
 
 /* Dropdown menu */
