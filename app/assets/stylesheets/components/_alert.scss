@@ -11,7 +11,17 @@
 }
 .alert-info {
   background: rgba(92, 162, 69, 0.6);
+  position: absolute;
+  top: 70px;
+  width: 100vw;
+  text-align: center;
+  color: white;
 }
 .alert-warning {
   background: $red;
+  position: absolute;
+  top: 70px;
+  width: 100vw;
+  text-align: center;
+  color: white;
 }
