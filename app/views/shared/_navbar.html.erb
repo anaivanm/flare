@@ -22,9 +22,9 @@
   <% if user_signed_in? && current_user.is_helper?%>
     <div class="navbar-wagon-item">
     <div class="dropdown">
-      <img src= "<%= asset_path 'logo.png' %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
+      <img src= "<%= cl_image_path current_user.photo %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
       <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-        <li><%= link_to "My Dashboard", dashboards_index_path, method: :index %>
+        <li><%= link_to "My Dashboard", my_dashboard_path %>
 
        <!--  <a href="#"></a></li> -->
         <!-- <li><a href="#">Escalation</a></li> -->
