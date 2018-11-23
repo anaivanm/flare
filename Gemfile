@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.4.4'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '1.9.1'
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
