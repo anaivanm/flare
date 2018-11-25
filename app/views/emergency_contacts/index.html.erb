@@ -2,9 +2,10 @@
   <div
    id="map"
    style="width: 60%;
-   height: 600px;"
+   height: calc(100vh-200px);"
    data-markers="<%= @markers.to_json %>"
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+   data-geolocation-api-key="<%= ENV['IP_GEOLOCATION_KEY'] %>"
   ></div>
 
   <div class="emergency-contacts">
@@ -19,3 +20,5 @@
     </ul>
   </div>
 </div>
+
+<h1 class="ipaddress"></h1>

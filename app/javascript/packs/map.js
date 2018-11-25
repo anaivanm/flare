@@ -4,6 +4,10 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const mapElement = document.getElementById('map');
+const api = document.querySelector('#map').dataset.geolocationApiKey
+let yourIp = "";
+
+// const url = `https://geo.ipify.org/api/v1?apiKey=${api}&ipAddress=${yourIp}`;
 
 if (mapElement) { // only build a map if there's a div#map to inject into
  mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -13,6 +17,23 @@ if (mapElement) { // only build a map if there's a div#map to inject into
  });
 
  const markers = JSON.parse(mapElement.dataset.markers);
+
+// Adding marker for user
+  if (mapElement) {
+    fetch('https://api.ipify.org?format=json').then(response => response.json())
+    .then((data) => {
+      console.log(data.ip);
+      fetch(`https://geo.ipify.org/api/v1?apiKey=${api}&ipAddress=${data.ip}`)
+      .then(response => response.json())
+      .then((data) => {
+        new mapboxgl.Marker()
+        .setLngLat([data.location.lng, data.location.lat])
+        .addTo(map);
+        console.log(data.location.lat)
+        console.log(data.location.lng)
+      });
+    });
+  };
 
   markers.forEach((marker) => {
     new mapboxgl.Marker()
@@ -44,6 +65,6 @@ if (mapElement) { // only build a map if there's a div#map to inject into
    if (mapElement) {
   map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
-  }));
-}
+    }));
+  }
 }
