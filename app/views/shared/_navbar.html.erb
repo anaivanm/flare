@@ -1,20 +1,8 @@
 <div class="navbar-umbrella navbar-fixed-top navbar-transparent">
-
 <!-- Logo  -->
-
-
   <%= link_to(root_path) do   %>
-  <%= image_tag 'logo-short.png', class: "navbar-umbrella-brand" %>
+  <%= image_tag 'logo-full-basic.png', class: "navbar-umbrella-brand" %>
   <% end %>
-
- <!-- Center Navigation -->
-
- <div class="navbar-center hidden-xs">
-  <a href="" class="navbar-wagon-item navbar-wagon-link">ABOUT US</a>
-  <a href="" class="navbar-wagon-item navbar-wagon-link">HOW IT WORKS</a>
-  <a href="" class="navbar-wagon-item navbar-wagon-link">SUPPORT US</a>
-  <a href="" class="navbar-wagon-item navbar-wagon-link">BLOG</a>
-</div>
 
 <!-- Right Navigation -->
 
@@ -25,9 +13,6 @@
       <img src= "<%= cl_image_path current_user.photo %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
       <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
         <li><%= link_to "My Dashboard", my_dashboard_path %>
-
-       <!--  <a href="#"></a></li> -->
-        <!-- <li><a href="#">Escalation</a></li> -->
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>
@@ -50,7 +35,7 @@
 <!-- Dropdown appearing on mobile only -->
 <div class="navbar-wagon-item hidden-md hidden-lg">
   <div class="dropdown">
-    <i class="fas fa-bars dropdown-toggle" style="color: #3385D9"data-toggle="dropdown" role="button"></i>
+    <i class="fas fa-bars dropdown-toggle" style="color: #282E38"data-toggle="dropdown" role="button"></i>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
       <% if user_signed_in? && current_user.is_helper? %>
       <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My shifts</a></li>

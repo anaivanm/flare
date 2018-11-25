@@ -9,8 +9,7 @@
     <%= stylesheet_pack_tag "map" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
-  <body class="<%= 'landing is-preload' if @landing %>">
-    <div id="page-wrapper">
+  <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
