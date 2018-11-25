@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_23_110834) do
+ActiveRecord::Schema.define(version: 2018_11_25_150602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 2018_11_23_110834) do
     t.bigint "helper_id"
     t.index ["helpee_id"], name: "index_chats_on_helpee_id"
     t.index ["helper_id"], name: "index_chats_on_helper_id"
+  end
+
+  create_table "emergency_contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone_number"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "opening"
+    t.integer "closing"
   end
 
   create_table "messages", force: :cascade do |t|

@@ -6,6 +6,7 @@
     <title>Flare</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <%= stylesheet_pack_tag "map" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body class="<%= 'landing is-preload' if @landing %>">

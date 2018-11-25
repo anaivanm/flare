@@ -1,0 +1,21 @@
+<div class="emergency-contacts-page-container">
+  <div
+   id="map"
+   style="width: 60%;
+   height: 600px;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+
+  <div class="emergency-contacts">
+    <ul class="map-list">
+      <% @emergency_contacts.each do |contact| %>
+        <li> <%= contact.name %>
+          <ul class="map-list">
+            <li><i class="fas fa-phone"></i> <%= contact.phone_number %></li>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

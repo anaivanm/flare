@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'emergency_contacts', to: "emergency_contacts#index"
   get 'my_dashboard',to: "dashboards#index"
   get 'design', to: "designs#index"
   # get 'messages/create'
