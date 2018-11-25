@@ -1,21 +1,19 @@
-<div class="box" style="background-color: #fff;">
-  <div class="box-item">
-    <div class="text-item">
-        <h3>Download our app</h3>
-        <p>Over 150,000 volunteers. Here for you at the press of a button.</p>
-    </div>
+<div class="container-fluid" style="background-color: #fff;">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="left-text">
+        <h1>Introducing the new Flare app.</h1>
+        <h3>Now available on Android and iOS devices.</h3>
+        <p>Get in touch with over 150,000 trained volunteers</p>
+        <div class="row">
+          <%= image_tag 'apple.png', width: 200, class: 'download-apple' %>
+          <%= image_tag 'google.png', width: 200, class: 'download-google'%>
 
-    <div class="image-item">
-      <div class="item">
-        <%= image_tag 'apple.png', width: 200 %>
         </div>
-        <div class="item">
-        <%= image_tag 'google.png', width: 200 %>
-        </div>
+      </div>
     </div>
-  </div>
-
-    <div class="box-item">
+    <div class="col-md-6 phone">
       <%= image_tag 'iphone.png' %>
     </div>
   </div>
+</div>
