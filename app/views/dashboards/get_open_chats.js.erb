@@ -1,0 +1,4 @@
+let list = document.querySelector('.open-chat-list-container')
+
+console.log("view activated")
+list.innerHTML = '<%= j render "shared/open_chats_list", chats: @open_chats %>'

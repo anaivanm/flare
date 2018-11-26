@@ -1,3 +1,4 @@
+
 <div class="navbar-umbrella navbar-fixed-top navbar-transparent">
 <!-- Logo  -->
   <%= link_to(root_path) do   %>
@@ -10,7 +11,11 @@
   <% if user_signed_in? && current_user.is_helper?%>
     <div class="navbar-wagon-item">
     <div class="dropdown">
-      <img src= "<%= cl_image_path current_user.photo %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
+      <% if current_user.photo? %>
+        <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-umbrella-menu", "data-toggle" => "dropdown"%>
+      <% else %>
+        <%= image_tag 'http://www.fastrackerzkennel.com/wp-content/uploads/2014/03/male-placeholder-image.jpeg', class: "avatar dropdown-toggle", id:"navbar-umbrella-menu", "data-toggle" =>"dropdown" %>
+      <% end %>
       <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
         <li>
           <%= link_to my_dashboard_path do %>
