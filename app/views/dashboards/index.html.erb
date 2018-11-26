@@ -4,25 +4,22 @@
     <div class="container" >
       <div class="row" align="justify">
         <div class="col-md-4">
-        <%= image_tag @user.photo.url || "http://placecage.com/50/50", size: "200x200", class: "profile-image" %>
+          <% if @user.photo? %>
+            <%= cl_image_tag @user.photo, size: "200x200", class: "profile-image" %>
+          <% else %>
+            <%= image_tag "http://placecage.com/200/200", size: "200x200", class: "profile-image" %>
+          <% end %>
         </div>
         <div class="col-md-4">
-        <!-- cl_image_tag current_user.photo, class: "avatar"  -->
-       <!--  <p>Upload a new photo</p> -->
+       <!--  user info -->
           <%= render "edit_user_info", user: @user %>
         </div>
       </div>
     </div>
   </div>
+  <!-- open chat list -->
   <div class="open-chat-list-container">
-    <ul>
-      <% @open_chats.each do |chat| %>
-        <% if chat.helpee.username? %>
-          <li><%= link_to "#{chat.helpee.username}", chat_path(chat) %></li>
-        <% else %>
-          <li><%= link_to "Anon", chat_path(chat) %></li>
-        <% end %>
-      <% end %>
-    </ul>
+    <%= render "open_chats_list", chats: @open_chats %>
   </div>
+  <%= link_to "Refresh Chat", open_chats_path, remote: true, class: "btn btn-primary"  %>
 </div>

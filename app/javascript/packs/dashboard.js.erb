@@ -1,0 +1,8 @@
+let list = document.querySelector('.open-chat-list-container')
+
+if (list) {
+    fetch("<%= open_chats_path %>")
+    .then((response) => {
+      console.log(response);
+    });
+}

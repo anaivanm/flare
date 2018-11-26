@@ -1,0 +1,10 @@
+  <h2>Open chats:</h2>
+  <ul id="chat-list">
+    <% chats.each do |chat| %>
+      <% if chat.helpee.username? %>
+        <li><%= link_to "#{chat.helpee.username.capitalize}", chat_path(chat) %></li>
+      <% else %>
+        <li><%= link_to "Anon", chat_path(chat) %></li>
+      <% end %>
+    <% end %>
+  </ul>
