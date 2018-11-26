@@ -21,5 +21,10 @@
   <div class="open-chat-list-container">
     <%= render "open_chats_list", chats: @open_chats %>
   </div>
-  <%= link_to "Refresh Chat", open_chats_path, remote: true, class: "btn btn-primary"  %>
+
+  <%= link_to "Refresh Chat", open_chats_path, remote: true, class: "btn btn-primary", id: "monkeypants"  %>
 </div>
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag "dashboard-refresh" %>
+<% end %>
