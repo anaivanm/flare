@@ -4,18 +4,26 @@
 
 .modal-content {
   background-color: rgb(255,255,255) !important;
-  padding: 40px 35px 65px 35px;
-  // display: table-cell;
   text-align: center;
   vertical-align: middle;
   color: $logo-blue;
   vertical-align: middle;
 
+  position: relative;
+  overflow-y: auto;
+  height: 50vh;
+  width: 22vw;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   h2 {
-    margin-top: 12.5px;
+    margin-top: 0;
   }
 }
 
@@ -26,8 +34,9 @@
 }
 
 .form-control {
-  margin-bottom: 25px;
-}
+   margin: 30px auto;
+   width: 85%;
+ }
 
 .btn-modal {
   text-transform: uppercase;
