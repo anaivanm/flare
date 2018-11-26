@@ -1,4 +1,5 @@
-let list = document.querySelector('.open-chat-list-container')
+console.log("Hello from js.erb");
 
-console.log("view activated")
-list.innerHTML = '<%= j render "shared/open_chats_list", chats: @open_chats %>'
+
+document.querySelector('.open-chat-list-container')
+.innerHTML = '<h2>Open chats:</h2> <%= j render "shared/open_chats_list", chats: @open_chats %>'
