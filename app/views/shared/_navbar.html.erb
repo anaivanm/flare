@@ -12,8 +12,16 @@
     <div class="dropdown">
       <img src= "<%= cl_image_path current_user.photo %>" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown">
       <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-        <li><%= link_to "My Dashboard", my_dashboard_path %>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <li>
+          <%= link_to my_dashboard_path do %>
+            My Dashboard <span class="fa fa-columns"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+          Log out <span class="fa fa-sign-out-alt"></span>
+          <% end %>
+        </li>
       </ul>
     </div>
     </div>
@@ -22,8 +30,16 @@
     <div class="dropdown">
       <i class="fas fa-user" class="avatar dropdown-toggle" id="navbar-umbrella-menu" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-umbrella-dropdown-menu">
-        <li><%= link_to "Emergency contacts", emergency_contacts_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <li>
+          <%= link_to emergency_contacts_path do %>
+           Emergency contacts <span class="fas fa-file-medical"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            Log out <span class="fa fa-sign-out-alt"></span>
+          <% end %>
+          </li>
       </ul>
     </div>
     </div>
@@ -38,8 +54,7 @@
     <i class="fas fa-bars dropdown-toggle" style="color: #282E38"data-toggle="dropdown" role="button"></i>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
       <% if user_signed_in? && current_user.is_helper? %>
-      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My shifts</a></li>
-      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">Escalate</a></li>
+      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My Dashboard</a></li>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
 
       <% elsif user_signed_in? %>
@@ -49,5 +64,6 @@
       <% end %>
     </ul>
   </div>
+</div>
 </div>
 </div>
