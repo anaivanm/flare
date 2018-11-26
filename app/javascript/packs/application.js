@@ -1,4 +1,5 @@
 import "bootstrap";
+import "./dashboard.js.erb";
 import "../modal.js";
 import "./map.js";
 

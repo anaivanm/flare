@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'emergency_contacts', to: "emergency_contacts#index"
   get 'my_dashboard',to: "dashboards#index"
+  get 'open_chats', to: "dashboards#get_open_chats", as: 'open_chats'
   get 'design', to: "designs#index"
   # get 'messages/create'
   devise_for :users

@@ -9,17 +9,14 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-      helpee = resource
-      @chat = Chat.create(helpee: current_user)
-      chat_path(@chat)
-    # if resource.helpee_chats # if the helpee has chats
-      # redirect_to chat_path cookies[:chat_id]
-      # @user_chat = Chat.find(resource.latest_chat_id)
-      # @user_chat.update(helpee: resource)
-      #redirect_to chat_path resource.helpee_chats.last # then redirect him to the latest
-    # end
-    # initial method
-    # request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+      if resource.is_helper
+        helper = resource
+        my_dashboard_path
+      else
+        helpee = resource
+        @chat = Chat.create(helpee: current_user)
+        chat_path(@chat)
+      end
   end
 
 def default_url_options
