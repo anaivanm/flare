@@ -5,6 +5,7 @@
   box-shadow: inset 0px -100px 81px -30px rgba(255,255,255,1);
   background-color: white;
   padding-top: 180px;
+
 }
 
 .banner-header p {
@@ -26,13 +27,19 @@
 
 .card-icon i {
   font-size: 52px;
-  color: #003f7f;
+  color: #edcbcb;
+  cursor: pointer;
 }
 
-.thirdbanner-container {
-  padding: 50px;
-  background-color:#edcbcb;
+.thirdbanner-container-fluid {
+  padding: 100px;
+  background-color:#white;
   border-radius:20px;
+  margin-right:20px;
+  margin-left:20px;
+
+
+
 }
 
 hr.style-eight {
