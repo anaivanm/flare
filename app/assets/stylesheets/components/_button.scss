@@ -1,5 +1,4 @@
 .btn {
-  border-radius: 4px;
   font-family: "Open Sans";
   font-weight: bold;
   font-size: 18px;
@@ -17,48 +16,35 @@
 }
 
 .button-banner {
-    border-radius: 20px;
     font-family: "Open Sans";
-    font-weight: bold;
-    font-size: 32px;
-    letter-spacing: 2px;
-    margin-top: 20px;
+    font-size: 25px;
+    letter-spacing: 5px;
     margin-left: 0px;
-    margin-right: 0px;    border: 4px solid #AA001C;
+    margin-right: 0px;
+    border: 2px solid $red;
     padding: 25px 70px;
     text-decoration: none;
-    opacity: 0.5;
     color: $red;
     background-color: white;
     -webkit-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
--moz-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+    box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+    transition: 0.5s ease all;
     &:hover {
-    border: 4px solid $red;
-    padding: 10px 25px 13px 25px;
     text-decoration: none;
-    color: $red;
-    background-color: white;
-    opacity: 1;
-    -webkit-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
--moz-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    color: white;
+    background-color: $red;
+    border-radius: 100px;
+    // background-color: white;
+    // color: $red;
+    // border: 4px solid $red;
+    // -webkit-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    // -moz-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    // box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
   }
 }
 
-.navbar-center a {
-  border-radius: 4px;
-  font-family: "Open Sans";
-  font-weight: bold;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin: 0px 30px;
-  border: 0px none white;
-  text-decoration: none;
-  color: $big-text-blue;
-}
 .navbar-right a {
-  border-radius: 4px;
   font-family: "Open Sans";
   font-weight: bold;
   font-size: 11px;
@@ -68,8 +54,13 @@ box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
   padding: 6px 12px 8px 12px;
   text-decoration: none;
   color: $big-text-blue;
+  -webkit-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+  box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
     &:hover {
-    background-color: $big-text-blue;
-    color: white;
+    border: 2px solid $big-text-blue;
+    -webkit-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
   }
 }
