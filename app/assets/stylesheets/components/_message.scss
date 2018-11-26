@@ -85,11 +85,9 @@
   justify-content: space-between;
 }
 
-#message_content {
-  margin-bottom: 0;
-}
-
 input.form-control {
+  margin: 0px;
+  width: 100%;
   border: 1px solid #ECECEC;
   box-shadow: none;
   font-size: 14px;
