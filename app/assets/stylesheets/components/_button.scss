@@ -63,11 +63,27 @@ box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
   font-weight: bold;
   font-size: 11px;
   letter-spacing: 1px;
-  margin: 0px 20px;
   border: 0.5px solid $big-text-blue;
   padding: 6px 12px 8px 12px;
   text-decoration: none;
   color: $big-text-blue;
+    &:hover {
+    background-color: $big-text-blue;
+    color: white;
+  }
+}
+.btn-login {
+  width: 100%;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px !important;
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  border: 0.5px solid $big-text-blue;
+  padding: 6px 12px 8px 12px;
+  text-decoration: none;
+  background-color: #F4f4f4;
     &:hover {
     background-color: $big-text-blue;
     color: white;
