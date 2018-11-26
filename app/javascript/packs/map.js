@@ -4,12 +4,12 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const mapElement = document.getElementById('map');
-const api = document.querySelector('#map').dataset.geolocationApiKey
 let yourIp = "";
 
 // const url = `https://geo.ipify.org/api/v1?apiKey=${api}&ipAddress=${yourIp}`;
 
 if (mapElement) { // only build a map if there's a div#map to inject into
+ const api = document.querySelector('#map').dataset.geolocationApiKey
  mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
  const map = new mapboxgl.Map({
    container: 'map',
