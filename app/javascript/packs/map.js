@@ -29,8 +29,6 @@ if (mapElement) { // only build a map if there's a div#map to inject into
         new mapboxgl.Marker()
         .setLngLat([data.location.lng, data.location.lat])
         .addTo(map);
-        console.log(data.location.lat)
-        console.log(data.location.lng)
       });
     });
   };
