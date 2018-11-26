@@ -1,18 +1,17 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+  <div class="chat-wrapper">
       <%= render 'shared/modal' %>
-      <div class="messages">
+      <div class="messages" id="chatbox">
         <% @chat.messages.each do |message| %>
         <%= render "shared/message", message: message, user_is_messages_author: message.user == current_user %>
         <% end %>
       </div>
       <div id="create-message">
-        <%= simple_form_for [ @chat, Message.new ], remote: true do |f| %>
-        <%= f.input :content, label: false %>
+        <%= simple_form_for [ @chat, Message.new ], remote: true, html: { class: 'toto' } do |f| %>
+          <input class="form-control string required" type="text" name="message[content]" id="message_content">
+        <%= f.submit 'Send', class: 'send-button' %>
         <% end %>
       </div>
-    </div>
   </div>
 </div>
 
@@ -32,4 +31,3 @@
     );
   </script>
 <% end %>
-

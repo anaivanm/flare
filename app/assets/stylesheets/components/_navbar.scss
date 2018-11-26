@@ -4,7 +4,7 @@
   background:#ffffff;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 50px;
+  padding: 0px 67px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,9 +31,9 @@
 }
 /* Logo */
 .navbar-umbrella-brand {
-  height: 50px;
-  width: 50px;
-  margin: 5px 0px;
+  height: 40px;
+  width: 40px;
+  // margin: 5px 0px;
 }
 
 /* User Avatar */
@@ -49,7 +49,6 @@
   align-items: center;
   justify-content: space-between;
   color: $big-text-blue;
-  padding-left: 60px;
 }
 
 /* Basic navbar item */
@@ -58,22 +57,12 @@
   padding: 0 20px;
 }
 
-/* Navbar link */
-
-.navbar-center {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: $big-text-blue;
-  margin-right: -70px;
-}
-
 /* Dropdown menu */
 .navbar-umbrella-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
 }
+
 .navbar-umbrella-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;

@@ -1,31 +1,52 @@
-.modal {
-  border-radius: 3px;
-}
-.modal-dialog {
-  display: table;
-  width: 20%;
+.fade {
+  background-color: rgba(247, 247, 247, 0.5) !important;
 }
 
 .modal-content {
-  background-color: rgba(255,255,255,0.5) !important;
-  padding: 40px 35px 65px 35px;
-  display: table-cell;
+  background-color: rgb(255,255,255) !important;
   text-align: center;
   vertical-align: middle;
   color: $logo-blue;
   vertical-align: middle;
 
+  position: relative;
+  overflow-y: auto;
+  height: 50vh;
+  width: 22vw;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-
   h2 {
-    margin-top: 12.5px;
+    margin-top: 0;
   }
 }
-.form-control {
-  margin-bottom: 25px;
+
+.modal-dialog {
+  display: table;
+  width: 20%;
+  top: 20%;
 }
+
+.form-control {
+   margin: 30px auto;
+   width: 85%;
+ }
+
 .btn-modal {
   text-transform: uppercase;
+}
+
+.sign_in_link a {
+  font-size: 14px;
+  color: $logo-blue !important;
+  opacity: 0.4;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }
