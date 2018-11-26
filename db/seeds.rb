@@ -22,6 +22,7 @@ EmergencyContact.create!(name: "Suicide Helpline", phone_number: "1813", opening
 
 chat = Chat.create!
 user = User.create!(email: "adlyne@gmail.com", password: "123456")
+helper = User.create!(email: "helper@sendaflare.com", password: "123456", is_helper: true)
 
 m1 = Message.create!(chat: chat, user: user, content: "First Message!")
 Message.create!(chat: chat, user: user, content: "Second Message!")
