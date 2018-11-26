@@ -1,5 +1,5 @@
 
-<div class="navbar-umbrella navbar-fixed-top navbar-transparent">
+<div class="navbar-umbrella navbar-fixed-top <%= @transparent ? "navbar-transparent" : "navbarsnot-transparent" %>">
 <!-- Logo  -->
   <%= link_to(root_path) do   %>
   <%= image_tag 'logo-full-basic.png', class: "navbar-umbrella-brand" %>

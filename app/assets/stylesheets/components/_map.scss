@@ -1,9 +1,21 @@
 .emergency-contacts-page-container {
   display: flex;
+  justify-content: space-evenly;
   width: 100%;
   height: calc(100vh - 200px);
-  margin-top: 70px;
+  margin: 100px 0 50px 20px;
+}
+.map-list-names {
+  list-style: none;
+  padding-left: 0;
 }
 .map-list {
   list-style: none;
+  padding-left: 15px;
+}
+ul li {
+  padding-bottom: 10px;
+}
+.emergency_contacts {
+  margin-left: -20px;
 }
