@@ -4,21 +4,19 @@
   flex-direction: column;
   align-items: center;
   height: 750px;
-  margin-bottom: 100px;
 }
 
 
 .messages {
   width: 50%;
   font-size: 14px;
-  color: #868686;
-  background-color: #ffffff;
-  padding: 20px;
-  border: 1px solid black;
+  background-color: #FCFCFC;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom-width: 0;
   height: 100vh;
   overflow: scroll;
-  margin-top: 100px;
+  margin-top: 80px;
     .avatar {
       width: 42px;
       height: 42px;
@@ -27,12 +25,14 @@
 }
 
 .send-button {
-  background-color: $eggshell;
-  font-family: "Open Sans";
+  font-family: "Hind";
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
-  border: 1px solid black;
-  border-left: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  padding: 6px 10px 5px 10px;
+  font-weight: 600;
+  border-left: none !important;
+  color: #257cc5;
 }
 
 #new_message {
@@ -41,42 +41,68 @@
 
 #message_content {
   margin-right: -3px;
-  height: 27px;
+  height: 35px;
   padding: -20px;
-  border-radius: 0px 5px 5px 0px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.3);;
+  border-right: none !important;
 }
 
 .message {
   display: flex;
-  margin-bottom: 10px;
+  margin: 10px;
+  padding: 10px 0px;
+      .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      margin: -20px -20px;
+      border-radius: 50%;
+      z-index: 1;
+      filter: brightness(1.2);
+      border: 1px solid white;
+    }
   &.right {
     flex-direction: row-reverse;
     .avatar {
       width: 42px;
       height: 42px;
       border-radius: 50%;
+      filter: brightness(1.2);
+      border: 1px solid white;
     }
     .message-content {
-      background-color: #F2F9FC;
-    }
-  }
+    background-color: #6399b9;
+    padding: 10px;
+    word-break: break-all;
+    color: white;
+    padding: 10px;
+    margin: 0px 0px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 3px 10px 47px -12px rgba(137,174,214,1);
+}
 }
 .message-content {
-  background-color: #F7F7F7;
-  border-radius: 3px;
-  margin: 0 10px;
-  padding: 11px 10px 8px 10px;
+  background-color: #9a9e9e;
+  padding: 10px;
   word-break: break-all;
-
+  color: white;
+  margin: 0px 10px;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 3px 10px 47px -12px rgba(137,174,214,1);
+}
 }
 
 #create-message {
-  width: 50%;
-  padding: 10px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  border: 1px solid black;
+    width: 50%;
+    padding: 10px;
+    background-color: #FCFCFC;
+    margin-bottom: 20px;
+    border-top: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .toto {
@@ -92,21 +118,22 @@ input.form-control {
   box-shadow: none;
   font-size: 14px;
   color: #868686;
+  background-color: #FCFCFC;
   &:focus {
     outline: none;
-    border: 1px solid blue;
+    border: 1px solid rgba(0, 0, 0, 0.3);;
     box-shadow: none;
   }
 }
-.chat-header {
-  background-color: #4F2F4C;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 100px;
-  h4 {
-    margin: 0;
-  }
-}
+// .chat-header {
+//   background-color: #4F2F4C;
+//   color: white;
+//   padding: 10px 20px;
+//   margin-top: 100px;
+//   h4 {
+//     margin: 0;
+//   }
+// }
 
 .form-group {
   margin: 0px;
