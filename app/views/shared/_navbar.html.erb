@@ -12,7 +12,7 @@
     <div class="navbar-wagon-item">
     <div class="dropdown">
       <% if current_user.photo? %>
-        <%= cl_image_path current_user.photo, class: "avatar dropdown-toggle", id: "navbar-umbrella-menu", "data-toggle" => "dropdown"%>
+        <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-umbrella-menu", "data-toggle" => "dropdown"%>
       <% else %>
         <%= image_tag 'http://www.fastrackerzkennel.com/wp-content/uploads/2014/03/male-placeholder-image.jpeg', class: "avatar dropdown-toggle", id:"navbar-umbrella-menu", "data-toggle" =>"dropdown" %>
       <% end %>
