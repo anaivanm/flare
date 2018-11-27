@@ -1,6 +1,26 @@
-<div class="container-fluid" style="    background-image: linear-gradient(to left bottom, rgba(15, 141, 168, 0.3), rgba(100, 146, 195, 0.4), rgba(165, 148, 200, 0.3), rgba(212, 153, 186, 0.4), rgba(236, 167, 167, 0.3));">
-  <div class="chat-wrapper">
+<div class="container-fluid">
+  <div class="chat-wrapper" style="background-image: linear-gradient(to left bottom, rgba(15, 141, 168, 0.3), rgba(100, 146, 195, 0.4), rgba(165, 148, 200, 0.3), rgba(212, 153, 186, 0.4), rgba(236, 167, 167, 0.3));">
       <div class="messages" id="chatbox">
+    <div class="chat-header">
+      <% if user_signed_in? && current_user.is_helper?%>
+          <p><%= "You are now chatting with #{@chat.helper.username}" %></p>
+          <%= link_to chat_path(@chat), method: :delete do %>
+            <i class="fas fa-times"></i>
+            <% end %>
+      <% else %>
+        <% if @chat.helper %>
+            <p><%= "You are now chatting with #{@chat.helper.username}" %></p>
+            <%= link_to chat_path(@chat), method: :delete do %>
+            <i class="fas fa-times"></i>
+            <% end %>
+        <% else %>
+          <p>Someone will be with you soon.</p>
+          <%= link_to chat_path(@chat), method: :delete do %>
+          <i class="fas fa-times"></i>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
         <% @chat.messages.each do |message| %>
         <%= render "shared/message", message: message, user_is_messages_author: message.user == current_user %>
         <% end %>

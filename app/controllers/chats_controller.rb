@@ -20,6 +20,11 @@ class ChatsController < ApplicationController
     @chat = Chat.create(helpee: current_user)
     redirect_to chat_path(@chat)
   end
-end
 
+  def destroy
+    @chat = Chat.find(params[:id])
+    @chat.destroy
+    redirect_to root_path
+  end
+end
 

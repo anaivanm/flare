@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # get 'messages/create'
   devise_for :users
   root to: 'pages#home'
-  resources :chats, only: [:show, :create] do
+  resources :chats, only: [:show, :create, :destroy] do
     resources :messages, only: [:create]
   end
 
