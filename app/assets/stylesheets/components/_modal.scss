@@ -3,16 +3,20 @@
 }
 
 .modal-content {
+  background-image: url("banner.png");
+  background-size: 3400px;
+
   background-color: rgb(255,255,255) !important;
   text-align: center;
   vertical-align: middle;
-  color: $logo-blue;
+  color: white;
+  text-shadow: 3px 3px 7px rgba(208,23,54,0.35);
 
   position: relative;
   overflow-y: auto;
-  height: 50vh;
-  width: 22vw;
-  padding: 30px;
+  height: 70vh;
+  width: 24vw;
+  padding: 45px 30px 20px 30px;
 
   display: flex;
   flex-direction: column;
@@ -23,28 +27,39 @@
   -moz-border-radius: 4px;
   h2 {
     margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    text-shadow: 1px 1px 9px rgba(208,23,54,0.35);
   }
-  .btn-login {
-    text-transform: uppercase;
+  .btn-modal {
     width: 85%;
   }
   .form-control {
-   margin: 30px auto;
-   width: 85%;
- }
+    margin: 30px auto;
+    width: 85%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: white;
+    background-color: transparent;
+  }
 }
 
 .modal-dialog {
   display: table;
   width: 20%;
-  top: 20%;
+  top: 12%;
 }
 
 .sign_in_link a {
   font-size: 14px;
-  color: $logo-blue !important;
+  color: white !important;
   opacity: 0.4;
   position: absolute;
   right: 15px;
   bottom: 15px;
+}
+
+#placeholder {
+  color: white;
 }
