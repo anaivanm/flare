@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :helper_chats, class_name: "Chat", foreign_key: "helper_id", dependent: :destroy
   has_many :helpee_chats, class_name: "Chat", foreign_key: "helpee_id", dependent: :destroy
   mount_uploader :photo, PhotoUploader
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   def avatar_url
     if is_helper?
