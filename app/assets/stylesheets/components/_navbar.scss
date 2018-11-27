@@ -65,26 +65,39 @@
 /* Dropdown menu */
 .navbar-umbrella-dropdown-menu {
   margin-top: 15px;
-  // box-shadow: 1px 1px 4px;
+  background-color: white;
 
 }
 
 .navbar-umbrella-dropdown-menu li > a {
-  transition: color 0.3s ease;
-  font-weight: lighter !important;
+  // transition: color 0.3s ease;
+  font-weight: lighter;
   font-size: 18px !important;
   padding: 10px 20px;
-  // background-color:#white !important;
   font-family: "Roboto", sans-serif;
+  display: block;
+  padding: 10px 20px;
+  font-color:black;
+  text-decoration: none;
 
-  overflow: hidden;
-  transition: all 0.5s;
 }
+
 .navbar-umbrella-dropdown-menu li > a:hover {
-  background: transparent !important;
-  background:#edcbcb;
-  -webkit-transform:scale(1.05);
+  background: #e8e8e8;
+  color: black;
+
+  &:after {
+  float: right;
+  opacity: 0;
+  font-size: 15px;
 }
+  &:hover:after {
+  opacity: 1;
+}
+
+}
+
+
 .navbar-umbrella-dropdown-menu:before {
   content: ' ';
   height: 10px;
@@ -93,7 +106,7 @@
   right: 10px;
   top: -6px;
   background-color: white;
-  transform: rotate(45deg);
+  // transform: rotate(45deg);
   // border-left: 1px solid;
   // border-top: 1px solid;
 }
@@ -103,17 +116,15 @@
   font-weight: bold;
   font-size: 11px;
   letter-spacing: 1px;
-  margin: 0px 20px;
   padding: 6px 12px 8px 12px;
   text-decoration: none;
   color: $big-text-blue;
-  // -webkit-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
-  // -moz-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
-  // box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
+  box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
     &:hover {
-    border: 0.2px solid $big-text-blue;
-    // -webkit-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
-    // -moz-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
-    // box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
+    box-shadow: 13px 10px 47px -22px rgba(0,0,0,0.75);
   }
 }
