@@ -13,7 +13,7 @@ EmergencyContact.destroy_all
 EmergencyContact.create!(name: "Amager Hopsital", address: "Italiensvej 1 , Copenhagen , Denmark", phone_number: "32 34 30 32", opening: 0000, closing: 2400)
 EmergencyContact.create!(name: "Bispebjerg Hospital", address: "Bispebjerg Bakke 23 , Copenhagen 2400 , Denmark", phone_number: "35 31 35 31", opening: 0000, closing: 2400)
 EmergencyContact.create!(name: "Hvidovre Hospital", address: "Kettegard Alle 30 , Hvidovre , Copenhagen 2650, Denmark", phone_number: "36 32 36 32", opening: 0000, closing: 2400)
-EmergencyContact.create!(name: "Teres Hospitalet Parken", address: "Øster Allé 42 , Copenhagen 2100 , Denmark", phone_number: "35 44 10 00", opening: 0000, closing: 2400)
+EmergencyContact.create!(name: "Rigshospitalet", address: "Blegdamsvej 9 , Copenhagen 2100 , Denmark", phone_number: "35 44 10 00", opening: 0000, closing: 2400)
 EmergencyContact.create!(name: "​Børne- og Ungdomspsykiatrisk Center", address: "Ndr. Ringvej 29-67, 2600 Glostrup ", phone_number: "38 64 06 71", opening: 0000, closing: 2400)
 EmergencyContact.create!(name: "Psy​kiatrisk Center Amager", address: "Digevej 110, 2300 Copenhagen", phone_number: "38 64 16 50 ", opening: 0000, closing: 2400)
 EmergencyContact.create!(name: "​Psykiatrisk Center København", address: "Tuborgvej 235, 2400 Copenhagen", phone_number: "38 64 73 60", opening: 0000, closing: 2400)
