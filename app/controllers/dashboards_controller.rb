@@ -1,7 +1,4 @@
-require "pry-byebug"
-
 class DashboardsController < ApplicationController
-
   skip_before_action :verify_authenticity_token, only: [:get_open_chats]
 
   def index
