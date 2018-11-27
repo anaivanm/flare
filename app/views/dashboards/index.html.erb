@@ -31,3 +31,7 @@
   </div>
   <!-- open chat list -->
 </div>
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag "dashboard-refresh" %>
+<% end %>
