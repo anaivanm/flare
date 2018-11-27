@@ -1,9 +1,12 @@
+<%= link_to "locate", dashboard_path(current_user), method: :patch, data: { confirm: "Would you like to share your location?"}, id: "locate-user" %>
+
 <div class="emergency-contacts-page-container">
   <div
    id="map"
    style="width: 60%;
    height: calc(100vh-200px);"
    data-markers="<%= @markers.to_json %>"
+   data-user="<%= @user.to_json if !@user.nil? %>"
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
    data-geolocation-api-key="<%= ENV['IP_GEOLOCATION_KEY'] %>"
   ></div>

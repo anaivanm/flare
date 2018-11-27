@@ -15,4 +15,11 @@ class DashboardsController < ApplicationController
       format.js  # <-- idem
     end
   end
+
+  def update
+    @user = User.find(params[:user_id])
+    @user.update(address: "Ahornsgade 21, 2200")
+
+    redirect_to emergency_contacts_path
+  end
 end

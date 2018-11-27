@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'emergency_contacts', to: "emergency_contacts#index"
   get 'my_dashboard',to: "dashboards#index"
   get 'open_chats', to: "dashboards#get_open_chats", as: 'open_chats'
   get 'design', to: "designs#index"
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
   resources :chats, only: [:show, :create] do
     resources :messages, only: [:create]
   end
+  get 'emergency_contacts/:user_id', to: "emergency_contacts#index", as: "emergency_contacts"
+  patch 'dashboard/:user_id', to: "dashboards#update", as: "dashboard"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
