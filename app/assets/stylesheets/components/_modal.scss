@@ -7,7 +7,6 @@
   text-align: center;
   vertical-align: middle;
   color: $logo-blue;
-  vertical-align: middle;
 
   position: relative;
   overflow-y: auto;
@@ -25,6 +24,10 @@
   h2 {
     margin-top: 0;
   }
+  .btn-login {
+    text-transform: uppercase;
+    width: 85%;
+  }
   .form-control {
    margin: 30px auto;
    width: 85%;
@@ -35,12 +38,6 @@
   display: table;
   width: 20%;
   top: 20%;
-}
-
-
-
-.btn-modal {
-  text-transform: uppercase;
 }
 
 .sign_in_link a {
