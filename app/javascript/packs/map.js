@@ -7,7 +7,6 @@ const mapElement = document.getElementById('map');
 const markers = JSON.parse(mapElement.dataset.markers);
 let user;
 if (document.querySelector('#map').dataset.user !== "") {
-  console.log("inside definition of variable")
   user = JSON.parse(mapElement.dataset.user);
 }
 
@@ -23,37 +22,22 @@ if (mapElement) { // only build a map if there's a div#map to inject into
    style: 'mapbox://styles/mapbox/streets-v10'
  });
 
-// Adding marker for user
-    // fetch('https://api.ipify.org?format=json').then(response => response.json())
-    // .then((data) => {
-    //   console.log(data.ip);
-    //   fetch(`https://geo.ipify.org/api/v1?apiKey=${api}&ipAddress=${data.ip}`)
-    //   .then(response => response.json())
-    //   .then((data) => {
-    //     new mapboxgl.Marker()
-    //     .setLngLat([data.location.lng, data.location.lat])
-    //     .addTo(map);
-    //   });
-    // });
-
 
   // adding markers to map
   markers.forEach((marker) => {
     new mapboxgl.Marker()
       .setLngLat([marker.lng, marker.lat])
+      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(marker.infoWindow.content))
       .addTo(map);
-  })
+  });
 
   if (document.querySelector('#map').dataset.user !== "") {
-    console.log("inside user conditional!")
-    new mapboxgl.Marker()
-      .setLngLat([user.lng, user.lat])
-      .addTo(map);
 
     map.setZoom(12.5);
     map.setCenter([user.lng, user.lat]);
 
-    new mapboxgl.Marker()
+    new mapboxgl.Marker({color: '#d01736'})
       .setLngLat([user.lng, user.lat])
       .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
       .setHTML(user.infoWindow.content))
@@ -73,14 +57,6 @@ if (mapElement) { // only build a map if there's a div#map to inject into
       map.fitBounds(bounds, { duration: 0, padding: 75 })
     }
   }
-
-  markers.forEach((marker) => {
-    new mapboxgl.Marker()
-      .setLngLat([marker.lng, marker.lat])
-      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-      .setHTML(marker.infoWindow.content))
-      .addTo(map);
-  });
 
   map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
