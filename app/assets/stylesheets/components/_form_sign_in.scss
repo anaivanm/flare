@@ -1,5 +1,7 @@
 .sign_in_form {
-  margin-top: 120px;
+  height: 75vh;
+  padding: 20px 30px;
+
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus
@@ -11,9 +13,6 @@
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0px 1000px white inset!important;
-  }
-  h3 {
-    letter-spacing: 1px;
   }
   .form-control-label, .form-check-label {
     font-size: 14px;
@@ -41,6 +40,12 @@
     letter-spacing: 0.5px;
   }
 }
+.wrapper h3 {
+    padding-top: 120px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
 
 
 
