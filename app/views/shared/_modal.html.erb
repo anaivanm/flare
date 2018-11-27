@@ -2,10 +2,11 @@
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
-      <h2>Hello, Friend</h2>
+      <h2>Hello there!</h2>
+      <p>Before we go on, please type your first name in the field below.</p>
       <%= form_tag chats_path, method: :post do %>
-        <%= text_field_tag :username, "", class: "form-control", placeholder: "What's your name?" %>
-        <%= submit_tag "Submit", class: "btn btn-login" %>
+        <%= text_field_tag :username, "", class: "form-control", placeholder: "First name", id: "placeholder" %>
+        <%= submit_tag "Submit", class: "btn btn-modal" %>
       <% end %>
       <% if !user_signed_in? %>
         <div class="sign_in_link">
