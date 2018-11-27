@@ -4,9 +4,7 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const mapElement = document.getElementById('map');
-let yourIp = "";
-
-// const url = `https://geo.ipify.org/api/v1?apiKey=${api}&ipAddress=${yourIp}`;
+const markers = JSON.parse(mapElement.dataset.markers);
 
 if (mapElement) { // only build a map if there's a div#map to inject into
  const api = document.querySelector('#map').dataset.geolocationApiKey
@@ -16,10 +14,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
    style: 'mapbox://styles/mapbox/streets-v10'
  });
 
- const markers = JSON.parse(mapElement.dataset.markers);
-
 // Adding marker for user
-  if (mapElement) {
     fetch('https://api.ipify.org?format=json').then(response => response.json())
     .then((data) => {
       console.log(data.ip);
@@ -31,8 +26,8 @@ if (mapElement) { // only build a map if there's a div#map to inject into
         .addTo(map);
       });
     });
-  };
 
+  // adding markers to map
   markers.forEach((marker) => {
     new mapboxgl.Marker()
       .setLngLat([marker.lng, marker.lat])
@@ -60,9 +55,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
       .addTo(map);
   });
 
-   if (mapElement) {
   map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
     }));
-  }
 }

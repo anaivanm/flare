@@ -1,12 +1,13 @@
 .box {
-  height: 300px;
+  height: 250px;
+  background-color: $white;
 }
 
 .box-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 footer {
