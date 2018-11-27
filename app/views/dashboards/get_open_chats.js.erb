@@ -1,5 +1,5 @@
 console.log("Hello from js.erb");
 
 
-document.querySelector('.open-chat-list-container')
+document.querySelector('.element-open-chats')
 .innerHTML = '<h2>Open chats:</h2> <%= j render "shared/open_chats_list", chats: @open_chats %>'

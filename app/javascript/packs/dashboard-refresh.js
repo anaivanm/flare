@@ -16,12 +16,12 @@ function refreshLogic() {
     window.currentChatCount = nextCount;
     const refreshedList = document.querySelectorAll('#chat-list li');
     const name = refreshedList[refreshedList.length-1].querySelector('a').innerHTML
+    console.log(name)
     swal({
         title: "New chat",
         text: `${name} started a new chat`
     });
   }
-
 }
 
 function refreshDashboard() {
