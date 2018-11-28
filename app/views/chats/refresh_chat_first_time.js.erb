@@ -1,0 +1,5 @@
+console.log("hello from refresh_chat_first_time.js.erb");
+
+ document.querySelector('#message-body')
+ .innerHTML = '<%= j render "shared/message", chat: @chat %>'
+
