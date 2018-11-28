@@ -11,29 +11,24 @@
 }
 
 .banner-text {
-  width: 400px;
-  margin: 150px 250px;
+  width: 31%;
+  margin: 180px 200px;
+  font-family: $headers-font;
 }
 
 #text-cto-h1 {
-  font-size: 40px;
-  color: $gray-base;
+  font-size: 45px;
+  color: $black;
   padding-bottom: 30px !important;
-  font-weight: 600;
+  font-weight: 700;
 }
 #text-cto-h3 {
+    color: $gray-base;
     letter-spacing: 2px;
     color: #282627;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 400;
     padding-bottom: 35px !important;
+}
 
-}
-.p {
-    font-size: 20px;
-    font-weight: bolder;
-    color:rgb(255, 255, 255);
-    opacity: 0.6;
-    margin-bottom: 30px;
-    color: #969696;
-}
 
