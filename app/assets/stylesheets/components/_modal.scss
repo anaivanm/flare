@@ -9,8 +9,10 @@
   background-color: rgb(255,255,255) !important;
   text-align: center;
   vertical-align: middle;
-  color: $white;
+  color: $modal-white;
   text-shadow: 3px 3px 7px rgba(208,23,54,0.35);
+  font-size: 20px;
+  font-weight: bolder;
 
   position: relative;
   overflow-y: auto;
@@ -25,12 +27,36 @@
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  h2 {
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset!important;
+  }
+  input:focus {
+    outline: none;
+    border: none;
+  }
+  h1 {
     margin-top: 0;
     margin-bottom: 0;
-    color: white;
+    color: $modal-white;
+    font-size: 40px;
+    font-weight: 600;
     text-shadow: 1px 1px 9px rgba(208,23,54,0.35);
   }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $modal-white;
+    opacity: 1; /* Firefox */
+    letter-spacing: 1px;
+}
   .btn-modal {
     width: 85%;
   }
@@ -40,8 +66,10 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: $white;
+    border-bottom: 1.5px solid $modal-white;
     background-color: transparent;
+    padding-left: 1px;
+    padding-bottom: 0;
   }
 }
 
@@ -53,13 +81,13 @@
 
 .sign_in_link a {
   font-size: 14px;
-  color: white !important;
-  opacity: 0.4;
+  color: $modal-white !important;
+  opacity: 0.9;
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 20px;
+  bottom: 20px;
 }
 
 #placeholder {
-  color: $white;
+  color: $modal-white;
 }
