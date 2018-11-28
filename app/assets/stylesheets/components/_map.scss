@@ -13,11 +13,25 @@
   list-style: none;
   padding-left: 15px;
 }
+#map {
+  box-shadow: 0 0 7px rgb(170,170,170);
+}
 ul li {
   padding-bottom: 10px;
 }
-.emergency_contacts {
-  margin-left: -20px;
+.emergency-contacts {
+  box-shadow: 0 0 7px rgb(170,170,170);
+  background-color: $white;
+  margin-left: 20px;
+  padding: 0 10px;
+  overflow-y: scroll;
+  h3 {
+    text-align: center;
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 #locate-user {
   display: none;
