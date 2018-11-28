@@ -4,7 +4,7 @@ function addMessageToDOM() {
   const input = document.querySelector('#message_content');
   input.value = '';
   scrollLastMessageIntoView();
-  input.blur();
+  input.focus();
 }
 
 <% if @message.errors.any? %>
