@@ -2,14 +2,12 @@
   <div class="chat-wrapper">
       <div class="messages" id="chatbox">
     <div class="chat-header">
-      <% if user_signed_in? && current_user.is_helper?%>
-          <p><%= "You are now chatting with #{@chat.helper.username}" %></p>
+      <% if @chat.helper.nil? %>
+        <p>Someone will be with you soon.</p>
+      <% elsif @chat.helpee == current_user%>
+        <p><%= "You are now chatting with #{@chat.helper.username}" %></p>
       <% else %>
-        <% if @chat.helper %>
-            <p><%= "You are now chatting with #{@chat.helper.username}" %></p>
-        <% else %>
-          <p>Someone will be with you soon.</p>
-        <% end %>
+        <p>You are now chatting with <%= @chat.helpee.username == "" ? "anonymous" : "#{@chat.helpee.username}" %></p>
       <% end %>
           <%= link_to chat_path(@chat), method: :delete do %>
             <i class="fas fa-times"></i>
