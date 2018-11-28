@@ -7,7 +7,7 @@
   top: 70px;
   width: 100vw;
   text-align: center;
-  color: white;
+  color: $white;
 }
 .alert-info {
   background: rgba(92, 162, 69, 0.6);
@@ -15,7 +15,7 @@
   top: 70px;
   width: 100vw;
   text-align: center;
-  color: white;
+  color: $white;
 }
 .alert-warning {
   background: $red;
@@ -23,5 +23,5 @@
   top: 70px;
   width: 100vw;
   text-align: center;
-  color: white;
+  color: $white;
 }
