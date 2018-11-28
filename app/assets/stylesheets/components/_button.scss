@@ -21,11 +21,11 @@
     letter-spacing: 5px;
     margin-left: 0px;
     margin-right: 0px;
-    border: 2px solid $red;
+    border: 2px solid $bubble-red;
     padding: 25px 70px;
     text-decoration: none;
-    color: $red;
-    background-color: $white;
+    color: $bubble-red;
+    background-color: $modal-white;
     -webkit-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
     box-shadow: 7px 5px 47px -22px rgba(0,0,0,0.75);
@@ -33,7 +33,7 @@
     &:hover {
     text-decoration: none;
     color: $white;
-    background-color: $red;
+    background-color: $bubble-red;
   }
 }
 
