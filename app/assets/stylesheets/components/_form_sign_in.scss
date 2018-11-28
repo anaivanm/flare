@@ -12,7 +12,7 @@
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px white inset!important;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset!important;
   }
   .form-control-label, .form-check-label {
     font-size: 14px;
@@ -42,6 +42,7 @@
 }
 .wrapper h3 {
     padding-top: 120px;
+    margin-top: 0;
     letter-spacing: 1px;
     text-align: center;
   }
