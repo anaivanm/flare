@@ -1,5 +1,7 @@
 import swal from 'sweetalert';
 
+console.log('hey from dashboard refresh');
+
 function clickButton() {
   const button = document.querySelector(".monkeypants");
   button.click();
@@ -30,3 +32,5 @@ function refreshDashboard() {
 }
 
 refreshDashboard();
+
+console.log("refreshDashboard")

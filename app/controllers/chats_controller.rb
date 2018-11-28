@@ -23,5 +23,12 @@ class ChatsController < ApplicationController
     @chat.destroy
     redirect_to root_path
   end
+
+  def refresh_chat_banner
+    @chat = Chat.includes(messages: :user).find(params[:id])
+    respond_to do |format|
+      format.js  # <-- idem
+    end
+  end
 end
 

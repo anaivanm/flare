@@ -1,0 +1,11 @@
+<% if chat.helper.nil? %>
+  <p class="no-helper">Someone will be with you soon.</p>
+<% elsif chat.helpee == current_user%>
+  <p class="added-helper"><%= "You are now chatting with #{@chat.helper.username}" %></p>
+<% else %>
+  <p class="added-helper">You are now chatting with <%= chat.helpee.username == "" ? "anonymous" : "#{@chat.helpee.username}" %></p>
+<% end %>
+<%= link_to chat_path(chat), method: :delete do %>
+  <i class="fas fa-times"></i>
+<% end %>
+
