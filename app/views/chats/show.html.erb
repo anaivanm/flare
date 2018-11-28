@@ -1,20 +1,13 @@
 <div class="container-fluid">
   <div class="chat-wrapper">
       <div class="messages" id="chatbox">
-    <div class="chat-header">
-      <% if @chat.helper.nil? %>
-        <p>Someone will be with you soon.</p>
-      <% elsif @chat.helpee == current_user%>
-        <p><%= "You are now chatting with #{@chat.helper.username}" %></p>
-      <% else %>
-        <p>You are now chatting with <%= @chat.helpee.username == "" ? "anonymous" : "#{@chat.helpee.username}" %></p>
-      <% end %>
-          <%= link_to chat_path(@chat), method: :delete do %>
-            <i class="fas fa-times"></i>
-            <% end %>
-    </div>
+      <div class="chat-header">
+        <%= render 'shared/chat_banner', chat: @chat %>
+      </div>
         <% @chat.messages.each do |message| %>
+
         <%= render "shared/message", message: message, user_is_messages_author: message.user == current_user %>
+
         <% end %>
       </div>
       <div id="create-message">
@@ -25,6 +18,8 @@
       </div>
   </div>
 </div>
+
+<%= link_to "Refresh Chat banner", refresh_chat_banner_path(@chat), remote: true, class: "btn btn-primary refresh-chat-banner"   %>
 
 <% content_for :after_js do %>
   <script>
@@ -41,4 +36,5 @@
       }
     );
   </script>
+  <%= javascript_pack_tag "chatban" %>
 <% end %>

@@ -1,0 +1,4 @@
+ console.log("hello from refresh_chat_banner.js.erb");
+
+ document.querySelector('.chat-header')
+ .innerHTML = '<%= j render "shared/chat_banner", chat: @chat %>'

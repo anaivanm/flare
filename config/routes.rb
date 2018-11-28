@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :chats, only: [:show, :create, :destroy] do
     resources :messages, only: [:create]
   end
+  get 'refresh_chat_banner/:id', to: 'chats#refresh_chat_banner', as: 'refresh_chat_banner'
   get 'emergency_contacts/:user_id', to: "emergency_contacts#index", as: "emergency_contacts"
   patch 'dashboard/:user_id', to: "dashboards#update", as: "dashboard"
 
