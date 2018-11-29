@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 750px;
+  height: 100vh;
   background-image: asset-url('chat-window.jpg');
   background-size: cover;
 }
@@ -15,7 +15,7 @@
   background-color: $modal-white;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom-width: 0;
-  height: 85vh;
+  height: 80vh;
   overflow: scroll;
   position: relative;
   z-index: 0;
