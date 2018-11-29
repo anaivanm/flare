@@ -19,6 +19,7 @@
   overflow: scroll;
   position: relative;
   z-index: 0;
+  position: relative;
   .chat-header {
     background-color: $bubble-red;
     color: $modal-white;
@@ -49,7 +50,19 @@
       width: 42px;
       height: 42px;
       border-radius: 50%;
-    }
+   }
+  #remove-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    z-index: 10000;
+  }
+  .stop {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    z-index: 10000;
+  }
 }
 
 .send-button {

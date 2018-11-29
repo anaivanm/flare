@@ -14,3 +14,5 @@ function refreshChatBanner() {
 }
 
 refreshChatBanner();
+
+
