@@ -17,7 +17,7 @@
   .form-control-label, .form-check-label {
     font-size: 14px;
     letter-spacing: 1px;
-    font-weight: lighter;
+    color: $white;
   }
   .form-control-label {
     padding-top: 15px;
@@ -30,23 +30,31 @@
   }
   a {
     font-size: 14px;
-    color: #62656a;
-    font-weight: lighter;
+    color: $white;
   }
   .form-text {
-    color: #5c585a;
+    color: $white;
     font-size: 12px;
     text-align: center;
     letter-spacing: 0.5px;
   }
 }
 .wrapper h3 {
+    color: $white;
     padding-top: 120px;
     margin-top: 0;
     letter-spacing: 1px;
     text-align: center;
   }
-
+.btn-login {
+  color: $white;
+  border: 0.5px solid $white;
+  background-color: transparent;
+  &:hover {
+    color: $dark-gray;
+    background-color: $white;
+  }
+}
 
 
 

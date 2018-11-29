@@ -43,6 +43,8 @@
   input:focus {
     outline: none;
     border: none;
+    border-bottom: 1.5px solid $modal-white;
+    letter-spacing: 1px;
   }
   h1 {
     margin-top: 0;
