@@ -80,7 +80,6 @@ body {
 }
 .element-upcoming-training-sessions {
   padding-top: 20px;
-
   h2 {
     text-align: center;
   }
@@ -103,11 +102,6 @@ body {
   //   display: table;
   //   clear: both;
   // }
-  overflow-y: scroll;
-}
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
 }
 .profile-image {
   border-radius: 50%;

@@ -1,9 +1,12 @@
 .emergency-contacts-page-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-around;
+  width: 80%;
   height: calc(100vh - 200px);
-  margin: 50px 0 50px 20px;
+  padding: 20px;
+  margin: 50px auto 50px auto;
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: 0 0 5px rgba(170,170,170,0.7)
 }
 .map-list-names {
   list-style: none;
@@ -23,15 +26,45 @@ ul li {
   box-shadow: 0 0 7px rgb(170,170,170);
   background-color: $white;
   margin-left: 20px;
-  padding: 0 10px;
+  padding: 0 30px;
   overflow-y: scroll;
+  font-family: $emergency-body;
+  li {
+    padding-bottom: 0;
+  }
   h3 {
     text-align: center;
+    font-weight: 500;
+    padding-bottom: 5px;
+    color: rgba(70,70,70,0.9);
+  }
+  .first-background {
+    color: rgba(70,70,70,1);
+  }
+  .second-background {
+    color: rgba(90,90,90,0.9);
+  }
+  hr {
+    display: block;
+    height: 1px;
+    width: 70%;
+    border: 0;
+    border-top: 1px solid rgba(90, 90, 90, 0.4);
+    margin: 13px auto;
   }
 }
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+.scrolling-bar::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+.scrolling-bar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+.scrolling-bar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(70,70,70,0.3);
 }
 #locate-user {
   display: none;
