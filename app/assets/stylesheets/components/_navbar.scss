@@ -27,10 +27,10 @@
 }
 
 .navbarsnot-transparent {
-  /* background:transparent; */
+  background:transparent;
   background-image: none;
   border-color: transparent;
-  position: static;
+
 }
 
 /* Logo */
@@ -69,7 +69,6 @@
     background-color: $black;
     a {
       text-decoration: none;
-      color: $modal-white;
     }
   }
 
@@ -83,12 +82,21 @@
 /* Dropdown menu */
 .dropdown-menu {
   margin-bottom: 0px;
-  background-color: $modal-white;
   li {
     border: 1px none $black !important;
+    padding: 5px 10px;
+    text-align: left;
     a {
-      padding: 5px 15px;
+      padding-left: 0px;
+      &:hover {
+      color: $gray-base;
+      }
     }
+  }
+  hr {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 1px solid $white;
   }
   p {
   font-weight: 400;
@@ -98,8 +106,5 @@
   padding: 0px;
   font-color: $gray-base;
   text-decoration: none;
-}
-p:hover {
-  background: $white;
 }
 }

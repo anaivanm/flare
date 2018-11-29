@@ -5,7 +5,7 @@
 <% else %>
   <p class="added-helper">You are now chatting with <%= chat.helpee.username == "" ? "anonymous" : "#{@chat.helpee.username}" %></p>
 <% end %>
+
 <%= link_to chat_path(chat), method: :delete do %>
   <i class="fas fa-times" title="End chat and go back to homepage"></i>
 <% end %>
-
