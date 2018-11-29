@@ -3,8 +3,9 @@
 }
 
 .modal-content {
-  background-image: asset-url("banner.png");
-  background-size: 3400px;
+  background-image: asset-url("banner.png"); /* fallback */
+  background: linear-gradient(rgba(145, 145, 145, 0.15), rgba(145, 145, 145, 0.15)), asset-url("banner.png");
+  background-size: 3700px;
 
   background-color: rgb(255,255,255) !important;
   text-align: center;
