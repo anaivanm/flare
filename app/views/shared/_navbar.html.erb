@@ -58,8 +58,8 @@
   <% else %>
   <div id="volunteeer-login">
     <%= link_to 'VOLUNTEER LOGIN', new_user_session_path %>
-  <% end %>
   </div>
+  <% end %>
 </div>
 
 <!-- Dropdown appearing on mobile only -->
@@ -68,7 +68,7 @@
     <i class="fas fa-bars dropdown-toggle" style="color: #282E38"data-toggle="dropdown" role="button"></i>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
       <% if user_signed_in? && current_user.is_helper? %>
-      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My Dashboard</a></li>
+      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My Dashboard</a></li><hr>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
 
       <% elsif user_signed_in? %>
