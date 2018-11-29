@@ -1,13 +1,14 @@
 .box {
   height: 250px;
   background-color: $white;
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
 
 .box-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 20px;
 }
 
 .box-item {

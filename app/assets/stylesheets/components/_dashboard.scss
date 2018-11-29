@@ -1,24 +1,27 @@
 body {
   background-image: linear-gradient(to left bottom, rgba(15, 141, 168, 0.3), rgba(100, 146, 195, 0.4), rgba(165, 148, 200, 0.3), rgba(212, 153, 186, 0.4), rgba(236, 167, 167, 0.3));
-
   }
 
 .margin-top{
    margin-top: 100px;
-}
-
 
 .monkeypants {
   display: none;
 }
+
+.dashboard {
+ height: 100vh;
+}
+
 .grid {
   display: grid;
   width: 70%;
-  height: 75vh;
+  height: 90vh;
   margin: 30px auto;
   grid-template-columns: 400px 1fr 1fr;
   grid-template-rows: 70% 30%;
 }
+
 .element-photo {
   display: flex;
   justify-content: center;
