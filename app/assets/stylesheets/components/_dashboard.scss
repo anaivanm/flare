@@ -4,21 +4,27 @@ body {
   }
 
 .padding-top{
-   padding-top: 100px;
+   padding-top: 70px;
 }
 
 
 .monkeypants {
   display: none;
 }
+
+.dashboard {
+ height: 100vh;
+}
+
 .grid {
   display: grid;
   width: 70%;
-  height: 75vh;
+  height: 90vh;
   margin: 30px auto;
   grid-template-columns: 400px 1fr 1fr;
   grid-template-rows: 70% 30%;
 }
+
 .element-photo {
   display: flex;
   justify-content: center;
