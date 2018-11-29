@@ -1,9 +1,8 @@
 <%= link_to "locate", dashboard_path(current_user), method: :patch, data: { confirm: "Would you like to share your location?"}, id: "locate-user" %>
-
 <div class="emergency-contacts-page-container">
   <div
    id="map"
-   style="width: 60%;
+   style="width: 70%;
    height: calc(100vh-200px);"
    data-markers="<%= @markers.to_json %>"
    data-user="<%= @user.to_json if !@user.nil? %>"
@@ -11,15 +10,25 @@
    data-geolocation-api-key="<%= ENV['IP_GEOLOCATION_KEY'] %>"
   ></div>
 
-  <div class="emergency-contacts">
+  <div class="emergency-contacts scrolling-bar">
     <h3>Open now:</h3>
     <ul class="map-list-names">
-      <% @emergency_contacts.each do |contact| %>
-        <li> <%= contact.name %>
-          <ul class="map-list">
-            <li><i class="fas fa-phone"></i> <%= contact.phone_number %></li>
-          </ul>
+      <% @emergency_contacts.each_with_index do |contact, i| %>
+        <% if i.even? %>
+          <li class="first-background"> <%= contact.name %>
+            <ul class="map-list">
+              <li><i class="fas fa-phone"></i> <%= contact.phone_number %></li>
+            </ul>
+          </li>
+          <hr>
+        <% else %>
+          <li class="second-background"> <%= contact.name %>
+            <ul class="map-list">
+              <li><i class="fas fa-phone"></i> <%= contact.phone_number %></li>
+            </ul>
         </li>
+        <hr>
+        <% end %>
       <% end %>
     </ul>
   </div>

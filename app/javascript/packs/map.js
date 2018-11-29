@@ -34,7 +34,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
 
   if (document.querySelector('#map').dataset.user !== "") {
 
-    map.setZoom(12.5);
+    map.setZoom(12);
     map.setCenter([user.lng, user.lat]);
 
     new mapboxgl.Marker({color: '#d01736'})

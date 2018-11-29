@@ -1,7 +1,8 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400,600|Prata:400,500|Josefin+Sans:300");
 
 // Define fonts for body and headers
 $body-font: "Open Sans", "Helvetica", "sans-serif";
 $headers-font: "Lato", "Helvetica", "sans-serif";
-
+$emergency-body: 'Josefin Sans', serif;
+$emergency-header: 'Prata', sans-serif;
