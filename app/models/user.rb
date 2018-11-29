@@ -12,9 +12,9 @@ class User < ApplicationRecord
 
   def avatar_url
     if is_helper?
-    "http://placecage.com/40/40"
+      "profile_pic.png"
     else
-    "https://images.unsplash.com/photo-1482424917728-d82d29662023?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3111583f370fe6f427ba4b67f2aef7d8&auto=format&fit=crop&w=40&q=40"
+    "http://blog.springfield.k12.or.us/yolanda/files/2009/02/person-placeholder-3.png"
     end
   end
 

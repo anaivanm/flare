@@ -21,7 +21,9 @@
 
 <%= link_to "Refresh Chat banner", refresh_chat_banner_path(@chat), remote: true, class: "btn btn-primary refresh-chat-banner"   %>
 
+
 <% content_for :after_js do %>
+  <%= javascript_include_tag 'cable', 'data-turbolinks-track': 'reload' %>
   <script>
     scrollLastMessageIntoView();
     App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create(
