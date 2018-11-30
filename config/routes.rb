@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'my_dashboard',to: "dashboards#index"
   get 'open_chats', to: "dashboards#get_open_chats", as: 'open_chats'
-  get 'design', to: "designs#index"
+  get 'design', to: "designs#index", as: 'meet-the-team'
   # get 'messages/create'
   devise_for :users
   root to: 'pages#home'
