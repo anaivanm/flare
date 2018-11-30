@@ -15,11 +15,11 @@ class ChatsController < ApplicationController
       sign_in(@helpee, scope: :user)
     end
     @chat = Chat.create(helpee: current_user)
-    @client = Twilio::REST::Client.new ENV['TWILIO_ACCT_SID'], ENV['TWILIO_SECRET_KEY']
-    phone_numbers = ['+45 91 99 30 99', '+45 50 37 35 64']
-    phone_numbers.each do |number|
-      @client.api.account.messages.create(from: '+18042943451', to: number, body: "Hey there. #{current_user.username || 'someone'} wants to talk on Flare.")
-    end
+    # @client = Twilio::REST::Client.new ENV['TWILIO_ACCT_SID'], ENV['TWILIO_SECRET_KEY']
+    # phone_numbers = ['+45 91 99 30 99', '+45 50 37 35 64']
+    # phone_numbers.each do |number|
+    #   @client.api.account.messages.create(from: '+18042943451', to: number, body: "Hey there. #{current_user.username || 'someone'} wants to talk on Flare.")
+    # end
 
     redirect_to chat_path(@chat)
   end
