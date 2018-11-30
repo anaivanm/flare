@@ -64,20 +64,40 @@
 
 <!-- Dropdown appearing on mobile only -->
 <div class="navbar-item hidden-md hidden-lg">
-  <div class="dropdown">
-    <i class="fas fa-bars dropdown-toggle" style="color: #282E38"data-toggle="dropdown" role="button"></i>
-    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-      <% if user_signed_in? && current_user.is_helper? %>
-      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">My Dashboard</a></li><hr>
-      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <div class="dropdown">
+        <i class="fas fa-bars dropdown-toggle" style="color: #282E38"data-toggle="dropdown" role="button"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <% if user_signed_in? && current_user.is_helper? %>
+                  <li>
+                    <%= link_to my_dashboard_path do %>
+                   <p>My Dashboard<span class="fa fa-columns"></span></p>
+              <% end %>
+                 </li>
+                 <li>
+                    <%= link_to destroy_user_session_path, method: :delete do %>
+                    <p>Log out<span class="fa fa-sign-out-alt"></span></p>
+                    <% end %>
+                  </li>
 
-      <% elsif user_signed_in? %>
-      <li><a href="#" class="navbar-umbrella-item navbar-umbrella-link">Emergency contacts</a></li>
-      <% else %>
-      <li><a href="<%= new_user_session_path %>" class="navbar-umbrella-item navbar-umbrella-link">Volunteer login</a></li>
-      <% end %>
-    </ul>
-  </div>
+                <% elsif user_signed_in? %>
+              <li>
+                <%= link_to emergency_contacts_path(current_user.id) do %>
+                <p>Emergency contacts <span class="fas fa-file-medical"></span></p>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <p>Log out <span class="fa fa-sign-out-alt"></span></p>
+                <% end %>
+              </li>
+                <% else %>
+              <li>
+                  <%= link_to 'Volunteer login', new_user_session_path %>
+               </li>
+              <% end %>
+          </ul>
+      </div>
 </div>
-</div>
+
+
 </div>
