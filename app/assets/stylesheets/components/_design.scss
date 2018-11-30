@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+}
+
+.team-page {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-page-grid {
+  display: grid;
+  width: 70%;
+  height: 75vh;
+  margin: 150px auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100% 0%;
+  grid-gap: 10px;
+  box-shadow: 10px 10px 39px -16px rgba(135,135,135,1);
+
+}
+
+.card-user {
+  background-color: rgba($white, 0.6);
+  padding: 0px 5px;
+}
+
+.card-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 55%;
+
+  .profile-image{
+  border: 5px solid rgba($white, 0.8);
+  box-shadow: 10px 10px 39px -16px rgba(135,135,135,1);
+  }
+}
+
+.name-field {
+  h3, p {
+    font-family: $body-font;
+    margin-top: 50px;
+    color: $gray-base;
+    text-align: center;
+  }
+}
