@@ -14,7 +14,7 @@ class User < ApplicationRecord
     if is_helper?
       "profile_pic.png"
     else
-    "https://image.shutterstock.com/image-vector/red-profile-icon-on-white-450w-421687531.jpg"
+    "https://cdn.dribbble.com/users/1068752/screenshots/5401753/new_avatar.jpg"
     end
   end
 
