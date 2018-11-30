@@ -15,7 +15,7 @@ body {
 
 .grid {
   display: grid;
-  width: 70%;
+  width: 90%;
   height: 90vh;
   margin: 30px auto;
   grid-template-columns: 400px 1fr 1fr;
@@ -68,7 +68,7 @@ body {
     letter-spacing: 2px;
   }
   h2 {
-    padding: 30px;
+    padding-top: 30px;
     text-align: center;
   }
   .week > li {
@@ -89,7 +89,6 @@ body {
   p {
     padding: 0 60px;
     margin-bottom: 3px;
-    font-size: 16px;
   }
   span {
     font-weight: bold;

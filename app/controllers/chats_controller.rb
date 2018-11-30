@@ -7,6 +7,7 @@ class ChatsController < ApplicationController
       @chat.helper = current_user
       @chat.save
     end
+    @transparent = true
   end
 
   def create
